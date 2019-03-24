@@ -1,28 +1,6 @@
-#include <iostream>
 #include <QCoreApplication>
 #include <QTimer>
-
-using namespace std;
-
-class Task: public QObject
-{
-    Q_OBJECT
-public:
-    Task(QObject *parent = 0) : QObject(parent) {}
-
-public slots:
-    void run()
-    {
-        cout << "Hello, World!\n";
-
-        emit finished();
-    }
-
-signals:
-    void finished();
-};
-
-#include "main.moc"
+#include "Task.h"
 
 int main(int argc, char *argv[])
 {
