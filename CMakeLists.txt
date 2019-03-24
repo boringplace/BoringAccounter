@@ -10,10 +10,11 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_executable (task main.cpp Task.cpp)
 
+find_package(Qt5Sql REQUIRED)
 if(${USE_QT} GREATER 4)
     find_package(Qt5Widgets REQUIRED)
-    target_link_libraries(task Qt5::Widgets)
+    target_link_libraries(task Qt5::Widgets Qt5::Sql)
 else()
     find_package(Qt4 REQUIRED)
-    target_link_libraries(task Qt4::QtGui)
+    target_link_libraries(task Qt4::QtGui Qt4::Sql)
 endif()
