@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8.8)
-project (EXAMPLE_QT)
+project (BoringAccounting_Console)
 
 if(NOT DEFINED USE_QT)
     set(USE_QT 5)
